@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thank you for your response</title>
+<style>
+:root{color-scheme:light dark;--canvas:#f3f8fe;--text:#20354e;--bubble:#2783de;--ring:rgba(39,131,222,.22);--face:#ffd66b;--ink:#493612}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--canvas);color:var(--text)}.scene{position:relative;min-height:440px;height:100svh;max-height:520px;overflow:hidden;display:grid;place-items:center;isolation:isolate;background:radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.8),transparent 65%)}.bubbles{position:absolute;inset:0;z-index:-1;overflow:hidden}.bubble{position:absolute;bottom:-150px;left:var(--x);width:var(--size);aspect-ratio:1;border-radius:50%;border:1px solid var(--ring);background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.7),rgba(39,131,222,.09) 50%,rgba(39,131,222,.02));animation:rise var(--duration) linear infinite;animation-delay:var(--delay)}.message{padding:32px 24px;max-width:650px;text-align:center}.face{width:116px;height:116px;margin:0 auto 32px;animation:bob 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(155,110,18,.12));transform-origin:center}.face svg{width:100%;height:100%;overflow:visible}.eyes{transform-box:fill-box;transform-origin:center;animation:blink 5.6s infinite}.cheeks{animation:glow 4.5s ease-in-out infinite}h1{font-size:clamp(28px,5vw,42px);font-weight:650;line-height:1.2;letter-spacing:-1px;margin:0;text-wrap:balance}.smile{animation:smile 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes rise{0%{transform:translate3d(0,0,0);opacity:0}12%{opacity:1}85%{opacity:1}100%{transform:translate3d(32px,-720px,0);opacity:0}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(5deg)}}
+@keyframes blink{0%,42%,46%,100%{transform:scaleY(1)}44%{transform:scaleY(.12)}}
+@keyframes smile{0%,100%{transform:scaleX(1)}50%{transform:scaleX(1.08)}}
+@keyframes glow{0%,100%{opacity:.5}50%{opacity:.8}}
+@media(max-width:480px){.scene{min-height:400px;max-height:460px}.face{width:104px;height:104px;margin-bottom:28px}.message{max-width:360px}h1{letter-spacing:-.7px}}
+@media(prefers-color-scheme:dark){:root{--canvas:#192533;--text:#f5f8fc;--ring:rgba(126,183,246,.24)}.scene{background:radial-gradient(ellipse at 50% 35%,rgba(49,76,108,.45),transparent 65%)}.bubble{background:radial-gradient(circle at 30% 25%,rgba(180,213,250,.15),rgba(94,159,232,.06) 50%,rgba(94,159,232,.02))}}
+@media(prefers-reduced-motion:reduce){.bubble,.face,.eyes,.smile,.cheeks{animation:none}.bubble{bottom:var(--still);opacity:.7}.face{transform:none}}
+</style>
+</head>
+<body>
+<main class="scene">
+<div class="bubbles" aria-hidden="true">
+<span class="bubble" style="--x:5%;--size:94px;--duration:17s;--delay:-8s;--still:13%"></span>
+<span class="bubble" style="--x:17%;--size:35px;--duration:14s;--delay:-11s;--still:76%"></span>
+<span class="bubble" style="--x:29%;--size:62px;--duration:20s;--delay:-3s;--still:6%"></span>
+<span class="bubble" style="--x:41%;--size:25px;--duration:13s;--delay:-8s;--still:84%"></span>
+<span class="bubble" style="--x:56%;--size:76px;--duration:19s;--delay:-16s;--still:82%"></span>
+<span class="bubble" style="--x:68%;--size:32px;--duration:16s;--delay:-5s;--still:9%"></span>
+<span class="bubble" style="--x:78%;--size:110px;--duration:22s;--delay:-11s;--still:22%"></span>
+<span class="bubble" style="--x:91%;--size:46px;--duration:15s;--delay:-13s;--still:70%"></span>
+<span class="bubble" style="--x:-3%;--size:40px;--duration:18s;--delay:-16s;--still:90%"></span>
+<span class="bubble" style="--x:86%;--size:24px;--duration:12s;--delay:-4s;--still:4%"></span>
+</div>
+<div class="message">
+<div class="face" aria-hidden="true">
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<circle cx="60" cy="60" r="55" fill="var(--face)"/>
+<path d="M24 36a43 43 0 0 1 39-20" fill="none" stroke="#fff0bb" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<g class="eyes" fill="var(--ink)"><ellipse cx="42" cy="49" rx="4.5" ry="6"/><ellipse cx="78" cy="49" rx="4.5" ry="6"/></g>
+<g class="cheeks" fill="#ee986c"><ellipse cx="29" cy="65" rx="8" ry="5"/><ellipse cx="91" cy="65" rx="8" ry="5"/></g>
+<path class="smile" d="M39 69Q60 94 81 69" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+</svg>
+</div>
+<h1>Thank you for your response</h1>
+</div>
+</main>
+</body>
+</html>
